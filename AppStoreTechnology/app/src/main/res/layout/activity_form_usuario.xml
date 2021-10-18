@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormUsuarioActivity">
+
+    <TextView
+        android:id="@+id/tituloFormRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="29dp"
+        android:text="Crear cuenta para continuar"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtNombreForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtRepContrasenaForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="Repita su contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtContrasenaForm" />
+
+    <EditText
+        android:id="@+id/edtContrasenaForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Ingrese contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/edtRepContrasenaForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsuarioForm" />
+
+    <EditText
+        android:id="@+id/edtUsuarioForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Ingrese nombre de cuenta"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/edtContrasenaForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDireccionForm" />
+
+    <EditText
+        android:id="@+id/edtDireccionForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Ingrese dirección"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtUsuarioForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnDistrito" />
+
+    <Spinner
+        android:id="@+id/spnDistrito"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtDireccionForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTelefonoForm" />
+
+    <EditText
+        android:id="@+id/edtTelefonoForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Ingrese telefono"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/spnDistrito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreForm" />
+
+    <EditText
+        android:id="@+id/edtNombreForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="Ingrese nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtTelefonoForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloFormRegister" />
+
+    <Button
+        android:id="@+id/btnRegistrarCuenta"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Registrar"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVolverLoginForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRepContrasenaForm" />
+
+    <Button
+        android:id="@+id/btnVolverLoginForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="36dp"
+        android:background="#00FFFFFF"
+        android:text="Login"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tituloYaTienesCuenta"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarCuenta" />
+
+    <TextView
+        android:id="@+id/tituloYaTienesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="Ya tienes cuenta?"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnVolverLoginForm"
+        app:layout_constraintEnd_toStartOf="@+id/btnVolverLoginForm"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
