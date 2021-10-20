@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PanelControlActivity">
+
+    <Button
+        android:id="@+id/btnManProveedores"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="28dp"
+        android:text="mantenimiento proveedores"
+        app:layout_constraintBottom_toTopOf="@+id/btnManCategorias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnReporteVentas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="48dp"
+        android:text="reporte de ventas"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnListadoUsuarios" />
+
+    <Button
+        android:id="@+id/btnManProductos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="27dp"
+        android:text="mantenimiento productos"
+        app:layout_constraintBottom_toTopOf="@+id/btnListadoUsuarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnManCategorias" />
+
+    <Button
+        android:id="@+id/btnManCategorias"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="32dp"
+        android:text="mantenimiento categorias"
+        app:layout_constraintBottom_toTopOf="@+id/btnManProductos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnManProveedores" />
+
+    <Button
+        android:id="@+id/btnListadoUsuarios"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="24dp"
+        android:text="listado de usuarios"
+        app:layout_constraintBottom_toTopOf="@+id/btnReporteVentas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnManProductos" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="8dp"
+        android:text="Bienvenido a Store Technology"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvNombreUsuario"
+        app:layout_constraintStart_toStartOf="@+id/btnReporteVentas"
+        app:layout_constraintTop_toBottomOf="@+id/btnReporteVentas" />
+
+    <TextView
+        android:id="@+id/tvNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:text="Usuario"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

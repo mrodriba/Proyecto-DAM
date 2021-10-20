@@ -9,9 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppStoreTechnology">
-        <activity android:name=".SplashActivity" android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".ManReporteVentasActivity"
+            android:label="Reporte de ventas"></activity>
+        <activity
+            android:name=".ManListUsuariosActivity"
+            android:label="Listado de usuarios" />
+        <activity
+            android:name=".ManProductosActivity"
+            android:label="Mantenimiento productos"/>
+        <activity
+            android:name=".ManCateagoriasActivity"
+            android:label="Mantenimiento categorias" />
+        <activity
+            android:name=".ManProveedoresActivity"
+            android:label="Mantenimiento proveedores" />
+        <activity
+            android:name=".PanelControlActivity"
+            android:label="Panel de control" />
+
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -24,9 +46,7 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>
