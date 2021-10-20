@@ -9,6 +9,9 @@
         app:showAsAction="always" />
 
     <item
+        android:id="@+id/optMisPedidos"
+        android:title="Mis pedidos" />
+    <item
         android:id="@+id/optCerrarSesion"
         android:title="Cerrar Sesion" />
 </menu>

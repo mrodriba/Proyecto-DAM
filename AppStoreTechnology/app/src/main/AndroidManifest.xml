@@ -10,14 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppStoreTechnology">
         <activity
+            android:name=".MisPedidosActivity"
+            android:label="Mis pedidos" ></activity>
+        <activity
+            android:name=".MiCarritoActivity"
+            android:label="Mi carrito" />
+        <activity
             android:name=".ManReporteVentasActivity"
-            android:label="Reporte de ventas"></activity>
+            android:label="Reporte de ventas" />
         <activity
             android:name=".ManListUsuariosActivity"
             android:label="Listado de usuarios" />
         <activity
             android:name=".ManProductosActivity"
-            android:label="Mantenimiento productos"/>
+            android:label="Mantenimiento productos" />
         <activity
             android:name=".ManCateagoriasActivity"
             android:label="Mantenimiento categorias" />
@@ -27,8 +33,6 @@
         <activity
             android:name=".PanelControlActivity"
             android:label="Panel de control" />
-
-
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

@@ -54,7 +54,14 @@ class PrincipalActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.optCarrito -> {
+                val vcarrito = Intent(this, MiCarritoActivity::class.java)
+                startActivity(vcarrito)
                 Toast.makeText(this,"Mi carrito", Toast.LENGTH_LONG).show()
+            }
+            R.id.optMisPedidos -> {
+                val vmispedidos = Intent(this, MisPedidosActivity::class.java)
+                startActivity(vmispedidos)
+                Toast.makeText(this,"Mis pedidos", Toast.LENGTH_LONG).show()
             }
             R.id.optCerrarSesion -> {
                 val vlogin = Intent(this, MainActivity::class.java)
