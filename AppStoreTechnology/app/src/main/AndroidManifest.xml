@@ -9,9 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppStoreTechnology">
+        <activity android:name=".FormProductoActivity" android:label="Mantenimiento productos">
+
+        </activity>
+        <activity
+            android:name=".FormCategoriaActivity"
+            android:label="Mantenimiento categorias" />
+        <activity
+            android:name=".FormProveedorActivity"
+            android:label="Mantenimiento proveedores" />
         <activity
             android:name=".MisPedidosActivity"
-            android:label="Mis pedidos" ></activity>
+            android:label="Mis pedidos" />
         <activity
             android:name=".MiCarritoActivity"
             android:label="Mi carrito" />

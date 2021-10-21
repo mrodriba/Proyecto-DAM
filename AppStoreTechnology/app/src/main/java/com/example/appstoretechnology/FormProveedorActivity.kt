@@ -5,26 +5,26 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_form_usuario.*
-import kotlinx.android.synthetic.main.activity_principal.*
+import kotlinx.android.synthetic.main.activity_form_proveedor.*
 
-class FormUsuarioActivity : AppCompatActivity() {
+class FormProveedorActivity : AppCompatActivity() {
     var v_distrito = arrayOf("Seleccione distrito","Ate","Ancon","San Juan de Miraflores","San Juan de Lurigancho","Lima")
     var distrito_seleccionado = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_form_usuario)
+        setContentView(R.layout.activity_form_proveedor)
 
         var adaptador = ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_spinner_dropdown_item,
-                v_distrito
+            this,
+            android.R.layout.simple_spinner_dropdown_item,
+            v_distrito
         )
 
-        spnDistrito.adapter = adaptador
-        spnDistrito.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spnDistritoProveedorForm.adapter = adaptador
+        spnDistritoProveedorForm.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View, p2: Int, p3: Long) {
                 // p0 => spinner
                 // p2 => indice
@@ -36,19 +36,12 @@ class FormUsuarioActivity : AppCompatActivity() {
             }
         }
 
-        btnVolverLoginForm.setOnClickListener {
-            limpiarCampos()
-            finish()
+        btnAgregarProvForm.setOnClickListener {
+            Toast.makeText(this,"Agregar nuevo proveedor",Toast.LENGTH_SHORT).show()
         }
-    }
 
-    fun limpiarCampos(){
-        edtNombreForm.setText("")
-        edtTelefonoForm.setText("")
-        spnDistrito.setSelection(0)
-        edtDireccionForm.setText("")
-        edtUsuarioForm.setText("")
-        edtContrasenaForm.setText("")
-        edtRepContrasenaForm.setText("")
+        btnEditarProvForm.setOnClickListener {
+            Toast.makeText(this,"Editar proveedor",Toast.LENGTH_SHORT).show()
+        }
     }
 }
