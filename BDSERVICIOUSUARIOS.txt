@@ -1,0 +1,44 @@
+create database bdserviciousuario;
+
+use bdserviciousuario;
+
+drop table if exists tb_tipo;
+
+CREATE TABLE tb_tipo(
+idtipo int primary key auto_increment,
+desctipo varchar(30) not null unique
+);
+
+insert into tb_tipo values(null,'Administrador'),(null,'Cliente');
+commit;
+
+drop table if exists tb_usuario;
+
+create table tb_usuario
+(
+   codusuario int primary key auto_increment,
+   nomusu varchar(50) not null,
+   celusu varchar(50) not null,
+   iddistrito int,
+   dirusu varchar(50) not null,
+   cuentausu varchar(70) not null unique,
+   claveusu varchar(40) not null,
+   idtipo int
+);
+
+insert into tb_usuario values
+(null,'Mark Gomez','123-123-123',1,'Algún lugar','cliente1@tec.com','123',2),
+(null,'Pedro castillo','123-123-123',2,'Algún lugar','cliente2@tec.com','123',2),
+(null,'Miranda nuñez','123-123-123',3,'Algún lugar','cliente3@tec.com','123',2),
+(null,'Mario Casas','123-123-123',2,'Algún lugar','cliente4@tec.com','123',2),
+(null,'Julio Verne','123-123-123',4,'Algún lugar','cliente5@tec.com','123',2),
+
+(null,'Hanssel suarez','123-123-123',1,'Algún lugar','admin1@tec.com','123',1),
+(null,'Maria ynga','123-123-123',2,'Algún lugar','admin2@tec.com','123',1),
+(null,'Ricardo carbajal','123-123-123',2,'Algún lugar','admin3@tec.com','123',1),
+(null,'Jorge quispe','123-123-123',3,'Algún lugar','admin4@tec.com','123',1);
+commit;
+
+alter table tb_usuario
+    add constraint fk_usuario_idtipo foreign key(idtipo) references tb_tipo(idtipo);
+commit;

@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             var hilo = Thread(Runnable {
                 var cuenta = "?xcuenta=" + edtUsuarioLogin.text.toString()
                 var clave = "&xclave=" + edtContrasenaLogin.text.toString()
-                var ruta_servicio = "http://192.168.56.1:8085/proyecto/ValidarUsuario.php" +cuenta + clave
+                var ruta_servicio = "http://TUIPDECOMPUTADORA/proyecto/ValidarUsuario.php" +cuenta + clave
                 var resultado = Utilitario.traerDatos_String(ruta_servicio)
                 runOnUiThread {
                     ValidarUsuario(resultado)

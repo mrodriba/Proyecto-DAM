@@ -101,7 +101,7 @@ class FormUsuarioActivity : AppCompatActivity() {
                         "&xclave=" + clave +
                         "&xtipo=" + tipo
 
-                var ruta_servicio = "http://192.168.56.1:8085/proyecto/NuevoUsuario.php" + parametros
+                var ruta_servicio = "http://TUIPDECOMPUTADORA/proyecto/NuevoUsuario.php" + parametros
 
                 var hilo = Thread(Runnable {
                     var rpta = Utilitario.enviarDatos_String(ruta_servicio)
