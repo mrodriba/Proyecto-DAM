@@ -7,11 +7,8 @@
     android:orientation="vertical"
     tools:context=".MisPedidosActivity">
 
-    <TextView
-        android:id="@+id/textView9"
+    <ListView
+        android:id="@+id/LVMISPEDIDOS"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mis pedidos"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+        android:layout_height="match_parent" />
 </LinearLayout>

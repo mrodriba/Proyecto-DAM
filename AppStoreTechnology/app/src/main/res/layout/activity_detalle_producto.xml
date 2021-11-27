@@ -35,6 +35,14 @@
                 android:hint="El codigo de producto"
                 android:inputType="textPersonName" />
 
+            <EditText
+                android:id="@+id/EDTIDUSU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="El id de usuario"
+                android:inputType="number" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

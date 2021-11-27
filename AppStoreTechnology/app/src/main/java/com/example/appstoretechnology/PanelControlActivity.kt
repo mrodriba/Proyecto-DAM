@@ -13,6 +13,9 @@ class PanelControlActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_panel_control)
 
+        var x = intent
+        tvNombreUsuario.setText(x.getStringExtra("ADMIN"))
+
         btnManProveedores.setOnClickListener {
             val vproveedores = Intent(this, ManProveedoresActivity::class.java)
             startActivity(vproveedores)
@@ -26,11 +29,6 @@ class PanelControlActivity : AppCompatActivity() {
         btnManProductos.setOnClickListener {
             val vproductos = Intent(this, ManProductosActivity::class.java)
             startActivity(vproductos)
-        }
-
-        btnListadoUsuarios.setOnClickListener {
-            val vlistadousuarios = Intent(this, ManListUsuariosActivity::class.java)
-            startActivity(vlistadousuarios)
         }
 
         btnReporteVentas.setOnClickListener {

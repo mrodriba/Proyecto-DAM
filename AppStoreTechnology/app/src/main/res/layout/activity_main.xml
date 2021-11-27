@@ -61,6 +61,7 @@
         android:layout_marginEnd="69dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="#4CAF50"
+        android:onClick="BuscarUsuario"
         android:text="Iniciar Sesión"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistrarte"
         app:layout_constraintEnd_toEndOf="parent"

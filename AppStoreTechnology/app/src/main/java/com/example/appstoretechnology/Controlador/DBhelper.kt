@@ -68,11 +68,14 @@ class DBhelper(context: Context) : SQLiteOpenHelper(context, "BDSTORETECHNOLOGY"
         // Crear las tablas
         db.execSQL(tb_categoria);
         db.execSQL(tb_distrito);
-        //db.execSQL(reg_distrito_0);
-        //db.execSQL(reg_distrito_1);
-        //db.execSQL(reg_distrito_2);
-        //db.execSQL(reg_distrito_3);
-        //db.execSQL(reg_distrito_4);
+
+        // REGISTROS DE DISTRITOS
+        db.execSQL(reg_distrito_0);
+        db.execSQL(reg_distrito_1);
+        db.execSQL(reg_distrito_2);
+        db.execSQL(reg_distrito_3);
+        db.execSQL(reg_distrito_4);
+
         db.execSQL(tb_proveedor);
         db.execSQL(tb_producto);
         db.execSQL(tb_venta);

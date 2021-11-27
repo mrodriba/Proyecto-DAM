@@ -3,6 +3,7 @@ package com.example.appstoretechnology
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
@@ -14,14 +15,17 @@ class PrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
-
         //Nombre del appBar
         //supportActionBar?.title = "Opciones"
+
         MostrarProductos()
 
         LVPRODUCTOSPRINCIPAL.setOnItemClickListener { adapterView, view, i, l ->
+            var x = intent
+            var idusuario = x.getIntExtra("IDUSU",0)
             val v_detalle = Intent(this,DetalleProductoActivity::class.java)
             v_detalle.putExtra("INDICE",i)
+            v_detalle.putExtra("IDUSU",idusuario)
             startActivity(v_detalle)
         }
     }
@@ -43,14 +47,18 @@ class PrincipalActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.optCarrito -> {
+                var x = intent
+                var idusuario = x.getIntExtra("IDUSU",0)
                 val vcarrito = Intent(this, MiCarritoActivity::class.java)
+                vcarrito.putExtra("IDUSU",idusuario)
                 startActivity(vcarrito)
-                Toast.makeText(this,"Mi carrito", Toast.LENGTH_LONG).show()
             }
             R.id.optMisPedidos -> {
+                var x = intent
+                var idusuario = x.getIntExtra("IDUSU",0)
                 val vmispedidos = Intent(this, MisPedidosActivity::class.java)
+                vmispedidos.putExtra("IDUSU",idusuario)
                 startActivity(vmispedidos)
-                Toast.makeText(this,"Mis pedidos", Toast.LENGTH_LONG).show()
             }
             R.id.optCerrarSesion -> {
                 val vlogin = Intent(this, MainActivity::class.java)

@@ -17,7 +17,7 @@ class FormUsuarioActivity : AppCompatActivity() {
     var patron_telefono = Pattern.compile("[0-9]{3}-[0-9]{3}-[0-9]{3}")
     var patron_direccion = Pattern.compile("[a-zA-Z-0-9 ]{5,50}")
     var patron_cuenta = Pattern.compile("[a-zA-Z-0-9 ]{5,14}@tec.com")
-    var patron_clave = Pattern.compile("[a-zA-Z-0-9 ]{5,40}")
+    var patron_clave = Pattern.compile("[a-zA-Z-0-9 ]{6,40}")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +82,7 @@ class FormUsuarioActivity : AppCompatActivity() {
                 edtContrasenaForm.requestFocus()
             }
             if (patron_clave.matcher(clave).matches() == false){
-                edtContrasenaForm.setError("Debe ingresar más de 5 caracteres")
+                edtContrasenaForm.setError("Debe ingresar más de 6 caracteres")
                 return
             }else{
                 edtContrasenaForm.setError(null)
