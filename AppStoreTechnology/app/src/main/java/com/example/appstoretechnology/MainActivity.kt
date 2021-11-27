@@ -14,27 +14,17 @@ import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
 
-    private var email by Delegates.notNull<String>()
-    private var password by Delegates.notNull<String>()
-    private lateinit var etEmail: EditText
-    private lateinit var etPassword: EditText
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         btnIniciarSesion.setOnClickListener {
-            etEmail = findViewById(R.id.edtUsuarioLogin)
-            etPassword = findViewById(R.id.edtContrasenaLogin)
-            //Obtenemos usuario y contraseña
-            email = etEmail.text.toString()
-            password = etPassword.text.toString()
             //
             val vcliente = Intent(this, PrincipalActivity::class.java)
             val vadmin = Intent(this, PanelControlActivity::class.java)
 
-            if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-                if (email == "admin@admin.com" && password == "123"){
+            if (edtUsuarioLogin.text.toString().isNotEmpty() && edtContrasenaLogin.text.toString().isNotEmpty()) {
+                if (edtUsuarioLogin.text.toString() == "admin@admin.com" && edtContrasenaLogin.text.toString() == "123"){
                     startActivity(vadmin)
                 }else{
                     startActivity(vcliente)
