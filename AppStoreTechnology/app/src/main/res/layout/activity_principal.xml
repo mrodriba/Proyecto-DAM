@@ -8,13 +8,6 @@
     android:padding="10dp"
     tools:context=".PrincipalActivity">
 
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spnCategoria"
-        android:layout_width="389dp"
-        android:layout_height="29dp"
-        android:layout_marginBottom="30dp"
-        android:orientation="vertical" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -22,8 +15,11 @@
         android:orientation="vertical">
 
         <ListView
+            android:id="@+id/LVPRODUCTOSPRINCIPAL"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:dividerHeight="10dp"
+            android:padding="10dp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppStoreTechnology">
-        <activity android:name=".FormProductoActivity" android:label="Mantenimiento productos">
-
-        </activity>
+        <activity
+            android:name=".DetalleProductoActivity"
+            android:label="Detalle del producto"></activity>
+        <activity
+            android:name=".FormProductoActivity"
+            android:label="Mantenimiento productos"></activity>
         <activity
             android:name=".FormCategoriaActivity"
             android:label="Mantenimiento categorias" />

@@ -64,14 +64,10 @@ class DBhelper(context: Context) : SQLiteOpenHelper(context, "BDSTORETECHNOLOGY"
         );
     """.trimIndent()
 
-    var reg_venta = """insert into venta(IDUsuario,IDProducto,Cantidad,MontoTotal,IDEstado) 
-        values(1,1,10,120.00,1);""".trimIndent()
-
     override fun onCreate(db: SQLiteDatabase) {
         // Crear las tablas
         db.execSQL(tb_categoria);
         db.execSQL(tb_distrito);
-        db.execSQL(reg_venta);
         //db.execSQL(reg_distrito_0);
         //db.execSQL(reg_distrito_1);
         //db.execSQL(reg_distrito_2);
@@ -79,6 +75,7 @@ class DBhelper(context: Context) : SQLiteOpenHelper(context, "BDSTORETECHNOLOGY"
         //db.execSQL(reg_distrito_4);
         db.execSQL(tb_proveedor);
         db.execSQL(tb_producto);
+        db.execSQL(tb_venta);
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {

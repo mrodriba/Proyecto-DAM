@@ -7,6 +7,23 @@ import com.example.appstoretechnology.Modelo.Producto
 class ProductoDAO(context: Context) {
     var helper = DBhelper(context)
 
+    fun ListarProductos_Cliente():ArrayList<String>{
+        var cadena = "select p.Nombre,c.Descripcion,p.Precio from producto p inner join categoria c on p.IDCategoria = c.IDCategoria"
+        var lista = ArrayList<String>()
+        var cad = ""
+        var db = helper.readableDatabase
+        var cur: Cursor = db.rawQuery(cadena, null)
+        if (cur.count > 0){
+            while (cur.moveToNext()){
+                cad = "Producto: "+cur.getString(0)+ " Categoria: " + cur.getString(1) + " Precio: "+ cur.getInt(2)
+                lista.add(cad)
+            }
+        }
+        cur.close()
+        db.close()
+        return lista
+    }
+
     fun ListarProductos_String():ArrayList<String>{
         var cadena = "select * from producto"
         var lista = ArrayList<String>()
