@@ -71,6 +71,21 @@ class ProductoDAO(context: Context) {
         db.execSQL(cad_sql)
         db.close()
     }
+     fun ObtenerStock(codigo : Int):Int{
+        var cadena =  """select Stock from producto where IDProducto=${codigo} """
+        var stock : Int
+        stock = 0
+        var db = helper.readableDatabase
+        var cur:Cursor = db.rawQuery(cadena, null)
+        if (cur.count > 0){
+            while (cur.moveToNext()){
+                stock = cur.getInt(0)
+            }
+        }
+        cur.close()
+        db.close()
+        return stock
+    }
     fun EditarProducto(ob_prod : Producto){
         var cad_sql = """
             update producto set Nombre='${ob_prod.nombre}', Descripcion='${ob_prod.descripcion}',
